@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="...">
+    <meta name="keywords" content="sites, web">
+    <meta name="author" content="Misael Lucas fonseca dos santos">
+    <link rel="icon" type="image/svg+xml" href="../img/foto_js.jpg">
+    <title>Exercicio03 - Aula03 JAVASCRIPT</title>
+    
+</head>
+
+<body>
+    <h1><mark> Manipulação de elementos (tags)</mark> do html através do js </h1>
+    <hr>
+    
+    <form action="#">
+        <input type="number" name="num1" id="num1" placeholder="Digite o primeiro numero" required>
+        <input type="number" name="num2" id="num2" placeholder="Digite o segundo numero" required>
+        <input type="button" onclick="soma();" value="Soma">
+        <input type="button" onclick="subtracao();" value="Subtraçao">
+        <input type="button" onclick="multiplicacao();" value=" Multiplicação">
+        <input type="button" onclick="divisao();" value="Divisão">
+    </form>
+
+    <br>
+    <li><a href="index.html" target="_blank">Sair</a></li>
+
+    <p><Span id="resultado"></Span></p>
+
+
+    <script>
+        function soma (){
+            let valor1 = document.getElementById('num1')
+            let valor2 = document.getElementById('num2')
+            let soma_ = Number(valor1.value) + Number(valor2.value)
+            document.getElementById('resultado').innerText ="O resultado é "+soma_
+
+        }
+         function subtracao(){
+            let valor1 = document.getElementById('num1')
+            let valor2 = document.getElementById('num2')
+            let subtracao_ = Number(valor1.value) - Number(valor2.value)
+            document.getElementById('resultado').innerText ="O resultado é "+subtracao_ 
+
+        }
+        function multiplicacao (){
+            let valor1 = document.getElementById('num1')
+            let valor2 = document.getElementById('num2')
+            let multiplicacao_ = Number(valor1.value) * Number(valor2.value)
+            document.getElementById('resultado').innerText ="O resultado é "+ multiplicacao_ 
+        }
+
+        function divisao (){
+            let valor1 = document.getElementById('num1')
+            let valor2 = document.getElementById('num2')
+            if (valor2 = 0){
+                resultado="Não foi possivel realizar essa conta!"
+
+            }else
+                {let divisao_ = Number(valor1.value) / Number(valor2.value)
+            
+            document.getElementById('resultado').innerText ="O resultado é "+divisao_         
+            }
+        }
+    
+        
+
+    </script>
+    
+</body>
+
+</html>
