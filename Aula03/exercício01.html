@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="...">
+    <meta name="keywords" content="sites, web">
+    <meta name="author" content="Misael Lucas fonseca dos santos">
+    <link rel="icon" type="image/svg+xml" href="../img/foto_js.jpg">
+    <title>Exercicio01 - Aula03 JAVASCRIPT</title>
+    
+</head>
+
+<body>
+    <h1><mark> Manipulação de elementos (tags)</mark> do html através do js </h1>
+    <hr>
+
+    <input type="button" onclick="triste();" value="feliz">
+    <input type="button" onclick="feliz();" value="triste">
+    <img src="img/emoji_triste.jpg" id="Rosto" style="width: 500px;">
+
+    <script>
+        function triste (){
+           var tags_i = document.getElementsByTagName('img')[0]
+           console.log(tags_i)
+           tags_i.src ="img/emoji_feliz.jpg"
+        }
+        
+         function feliz (){
+           var tags_i = document.getElementsByTagName('img')[0]
+           console.log(tags_i)
+           tags_i.src ="img/emoji_triste.jpg"
+        }
+        
+
+
+    </script>
+    
+</body>
