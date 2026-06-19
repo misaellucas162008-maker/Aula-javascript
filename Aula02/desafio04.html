@@ -8,7 +8,7 @@
     <meta name="keywords" content="sites, web">
     <meta name="author" content="Misael Lucas fonseca dos santos">
     <link rel="icon" type="image/svg+xml" href="../img/foto_js.jpg">
-    <title>DESAFIO 03 - Aula02 JAVASCRIPT</title>
+    <title>DESAFIO 04 - Aula02 JAVASCRIPT</title>
     
 </head>
 
@@ -17,7 +17,7 @@
     <hr>
 
     <div>
-        <img src="../img/corinthians.jpg" alt="Time do corinthians" width="250px" title="Corinthians"> <br>
+        <img src="../img/corinthians.jpg" alt="Time do corinthians" width="250px" title="Corinthians">
         <button onclick="Trocar_img()">Trocar imagem</button>
     </div>
 
@@ -25,13 +25,19 @@
     <script>
         function Trocar_img (){
             const tags_i = document.getElementsByTagName('img'); 
-            let tags_i_1 = tags_i[0]
 
             console.log(tags_i)
-         
+            let tags_i_1 = tags_i[0]
+            if(tags_i_1.title=="Corvette"){
+                  tags_i_1.src="../img/corinthians.jpg"
+                tags_i_1.title = "Corinthians" 
+            
+            }else{
                 tags_i_1.src="../img/corvette.jpg"
-                tags_i_1.title = "Corvette"         
+                tags_i_1.title = "Corvette"       
+            }
         }
+        
         
 
 
